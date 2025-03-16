@@ -13,8 +13,9 @@ var (
 )
 
 type Config struct {
-	GoCardless GoCardlessConfig `yaml:"gocardless"`
-	Pushover   PushoverConfig   `yaml:"pushover"`
+	GoCardless    GoCardlessConfig    `yaml:"gocardless"`
+	Pushover      PushoverConfig      `yaml:"pushover"`
+	Requisitioner RequisitionerConfig `yaml:"requisitioner"`
 }
 
 type GoCardlessConfig struct {
@@ -48,6 +49,23 @@ type PushoverConfig struct {
 type PushoverTokens struct {
 	User string `yaml:"user"`
 	App  string `yaml:"app"`
+}
+
+type RequisitionerConfig struct {
+	Listen   ListenConfig   `yaml:"listen"`
+	Redirect RedirectConfig `yaml:"redirect"`
+}
+
+type ListenConfig struct {
+	Host string `yaml:"host"`
+	Port int    `yaml:"port"`
+}
+
+type RedirectConfig struct {
+	Proto string `yaml:"proto"`
+	Host  string `yaml:"host"`
+	Port  int    `yaml:"port"`
+	Path  string `yaml:"path"`
 }
 
 func GetConfig() Config {
