@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	gocardless "github.com/forquare/balancepush-gocardless"
 	"github.com/forquare/balancepush/config"
-	"github.com/forquare/balancepush/gocardless"
 	"github.com/gregdel/pushover"
 	"log"
 	"strings"

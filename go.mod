@@ -1,12 +1,12 @@
 module github.com/forquare/balancepush
 
-go 1.24.0
+go 1.24.1
 
 tool github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen
 
 require (
-	github.com/forquare/balancepush/config v0.0.0-00010101000000-000000000000
-	github.com/forquare/balancepush/gocardless v0.0.0-00010101000000-000000000000
+	github.com/forquare/balancepush-gocardless v0.0.0-20250316213508-dabcb3d25d99
+	github.com/forquare/balancepush/config v0.0.0-20250226112545-a25f561c6cc0
 	github.com/gregdel/pushover v1.3.1
 )
 
@@ -49,9 +49,4 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-)
-
-replace (
-	github.com/forquare/balancepush/config => ./config
-	github.com/forquare/balancepush/gocardless => ./gocardless
 )
